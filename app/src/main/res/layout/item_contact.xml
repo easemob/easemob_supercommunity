@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/adaptive_12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical">
+
+        <com.community.easeim.common.widget.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="@dimen/adaptive_32dp"
+            android:layout_height="@dimen/adaptive_32dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/default_head"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp"
+            android:drawableEnd="@drawable/icon_go"
+            android:layout_marginEnd="@dimen/adaptive_22dp"
+            android:layout_marginStart="@dimen/adaptive_12dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:background="#47464B"
+        app:layout_constraintTop_toBottomOf="@id/ll_content"
+        android:layout_marginTop="@dimen/adaptive_12dp"
+        android:layout_marginStart="@dimen/adaptive_64dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

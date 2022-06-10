@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sheet_height">620dp</dimen>
+    <dimen name="title_margin">40dp</dimen>
+    <dimen name="ease_chat_max_width">270dp</dimen>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1f1f1f"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="138dp"
+        android:background="@drawable/home_start_top"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_create"
+        android:layout_width="246dp"
+        android:layout_height="@dimen/adaptive_48dp"
+        app:layout_constraintTop_toBottomOf="@+id/top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/adaptive_20dp"
+        android:background="@drawable/sp_radius_1f1f1f_border_414042"
+        android:orientation="horizontal"
+        android:onClick="onCreateGround"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_14dp"
+            android:layout_height="@dimen/adaptive_14dp"
+            android:src="@drawable/icon_add"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp"
+            android:layout_marginStart="@dimen/adaptive_3dp"
+            android:text="创建我的社区"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_find"
+        android:layout_width="246dp"
+        android:layout_height="@dimen/adaptive_48dp"
+        app:layout_constraintTop_toBottomOf="@+id/ll_create"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/adaptive_10dp"
+        android:background="@drawable/sp_radius_1f1f1f_border_414042"
+        android:orientation="horizontal"
+        android:onClick="onFindGround"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_14dp"
+            android:layout_height="@dimen/adaptive_14dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_search"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/adaptive_3dp"
+            android:textSize="@dimen/adaptive_18sp"
+            android:text="发现有趣社区"/>
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

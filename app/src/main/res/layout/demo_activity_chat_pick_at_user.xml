@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.community.easeim.imkit.widget.EaseTitleBar
+        android:id="@+id/title_bar_pick"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/em_common_title_bar_height"
+        app:titleBarTitle="@string/em_chat_pick_user_title"
+        app:titleBarDisplayHomeAsUpEnabled="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:srlEnableLoadMore="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar_pick"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.community.easeim.imkit.widget.EaseRecyclerView
+            android:id="@+id/rv_pick_user_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <com.community.easeim.imkit.widget.EaseSidebar
+        android:id="@+id/side_bar_pick_user"
+        android:layout_width="@dimen/em_common_side_bar_width"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_bar_pick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:ease_side_bar_text_size="@dimen/em_size_big"/>
+
+    <TextView
+        android:id="@+id/floating_header"
+        android:layout_centerInParent="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/em_contact_sidebar_floating_header" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

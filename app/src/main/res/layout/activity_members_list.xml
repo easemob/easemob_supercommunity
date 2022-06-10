@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/my_common_color"
+    android:paddingTop="@dimen/title_margin">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:layout_weight="1"
+            android:text="成员列表"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/adaptive_20dp"
+            tools:text="900人"
+            android:textColor="#47464B"
+            android:textSize="@dimen/adaptive_16sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/adaptive_34dp"
+        android:layout_marginStart="@dimen/adaptive_16dp"
+        android:layout_marginTop="@dimen/adaptive_8dp"
+        android:layout_marginEnd="@dimen/adaptive_16dp"
+        android:background="@drawable/sp_search_transparent"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="@dimen/adaptive_35dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_title" />
+
+    <ImageView
+        android:layout_width="@dimen/adaptive_20dp"
+        android:layout_height="@dimen/adaptive_20dp"
+        android:layout_marginStart="@dimen/adaptive_10dp"
+        android:layout_marginTop="@dimen/adaptive_8dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_search"
+        app:layout_constraintLeft_toLeftOf="@id/et_search"
+        app:layout_constraintTop_toTopOf="@id/et_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_10dp"
+        android:background="@color/my_common_color"
+        app:layout_constraintTop_toBottomOf="@id/et_search"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_members"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/adaptive_17dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_filter" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,184 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="em_common_title_bar_height">44dp</dimen>
+    <dimen name="em_common_search_height">36dp</dimen>
+    <dimen name="em_common_side_bar_width">25dp</dimen>
+    <dimen name="em_common_item_height">66dp</dimen>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="em_size_small">12sp</dimen>
+    <dimen name="em_size_normal">14sp</dimen>
+    <dimen name="em_size_big">16sp</dimen>
+    <dimen name="em_size_big_notify">18sp</dimen>
+
+    <dimen name="em_login_bg_radius">57dp</dimen>
+    <dimen name="em_login_margin_left">33dp</dimen>
+    <dimen name="em_login_margin_right">33dp</dimen>
+    <dimen name="em_login_margin_top">20dp</dimen>
+    <dimen name="em_login_padding_left">18dp</dimen>
+    <dimen name="em_login_padding_right">18dp</dimen>
+
+    <dimen name="em_login_text_size">@dimen/em_size_big</dimen>
+    <dimen name="em_login_server_hint_text_size">@dimen/em_size_normal</dimen>
+
+    <dimen name="em_main_badge_size">25dp</dimen>
+    <dimen name="em_main_badge_margin_left">35dp</dimen>
+    <dimen name="em_main_badge_margin_top">5dp</dimen>
+
+    <dimen name="em_empty_layout_text_size">@dimen/em_size_small</dimen>
+
+    <dimen name="em_add_contact_title_bar_height">36dp</dimen>
+
+    <dimen name="em_friends_header_item_height">58dp</dimen>
+
+    <dimen name="em_friends_contact_detail_note_size">@dimen/em_size_normal</dimen>
+
+    <dimen name="em_about_me_avatar_size">25dp</dimen>
+
+    <dimen name="em_margin_15">15dp</dimen>
+    <dimen name="em_margin_10">10dp</dimen>
+    <dimen name="em_margin_20">20dp</dimen>
+    <dimen name="em_margin_30">30dp</dimen>
+    <dimen name="em_margin_40">40dp</dimen>
+
+    <dimen name="em_padding_20">20dp</dimen>
+    <dimen name="em_padding_15">15dp</dimen>
+    <dimen name="em_padding_10">10dp</dimen>
+
+    <dimen name="padding_search_bar">5dp</dimen>
+
+    <dimen name="recall_dimen">8dp</dimen>
+    <dimen name="recall_dimen_bg">2dp</dimen>
+    <dimen name="recall_dimen_4">4dp</dimen>
+    <dimen name="recall_dimen_256">256dp</dimen>
+    <dimen name="recall_size_12">12sp</dimen>
+    <dimen name="recall_size_8">8sp</dimen>
+
+    <dimen name="activity_animation_duration">5000</dimen>
+
+
+    <dimen name="adaptive_1dp">1dp</dimen>
+    <dimen name="adaptive_2dp">2dp</dimen>
+    <dimen name="adaptive_3dp">3dp</dimen>
+    <dimen name="adaptive_4dp">4dp</dimen>
+    <dimen name="adaptive_5dp">5dp</dimen>
+    <dimen name="adaptive_6dp">6dp</dimen>
+    <dimen name="adaptive_7dp">7dp</dimen>
+    <dimen name="adaptive_8dp">8dp</dimen>
+    <dimen name="adaptive_9dp">9dp</dimen>
+    <dimen name="adaptive_10dp">10dp</dimen>
+    <dimen name="adaptive_11dp">11dp</dimen>
+    <dimen name="adaptive_12dp">12dp</dimen>
+    <dimen name="adaptive_13dp">13dp</dimen>
+    <dimen name="adaptive_14dp">14dp</dimen>
+    <dimen name="adaptive_15dp">15dp</dimen>
+    <dimen name="adaptive_16dp">16dp</dimen>
+    <dimen name="adaptive_17dp">17dp</dimen>
+    <dimen name="adaptive_18dp">18dp</dimen>
+    <dimen name="adaptive_19dp">19dp</dimen>
+    <dimen name="adaptive_20dp">20dp</dimen>
+    <dimen name="adaptive_21dp">21dp</dimen>
+    <dimen name="adaptive_22dp">22dp</dimen>
+    <dimen name="adaptive_23dp">23dp</dimen>
+    <dimen name="adaptive_24dp">24dp</dimen>
+    <dimen name="adaptive_25dp">25dp</dimen>
+    <dimen name="adaptive_26dp">26dp</dimen>
+    <dimen name="adaptive_27dp">27dp</dimen>
+    <dimen name="adaptive_28dp">28dp</dimen>
+    <dimen name="adaptive_29dp">29dp</dimen>
+    <dimen name="adaptive_30dp">30dp</dimen>
+    <dimen name="adaptive_31dp">31dp</dimen>
+    <dimen name="adaptive_32dp">32dp</dimen>
+    <dimen name="adaptive_33dp">33dp</dimen>
+    <dimen name="adaptive_34dp">34dp</dimen>
+    <dimen name="adaptive_35dp">35dp</dimen>
+    <dimen name="adaptive_36dp">36dp</dimen>
+    <dimen name="adaptive_37dp">37dp</dimen>
+    <dimen name="adaptive_38dp">38dp</dimen>
+    <dimen name="adaptive_39dp">39dp</dimen>
+    <dimen name="adaptive_40dp">40dp</dimen>
+    <dimen name="adaptive_41dp">41dp</dimen>
+    <dimen name="adaptive_42dp">42dp</dimen>
+    <dimen name="adaptive_43dp">43dp</dimen>
+    <dimen name="adaptive_44dp">44dp</dimen>
+    <dimen name="adaptive_45dp">45dp</dimen>
+    <dimen name="adaptive_46dp">46dp</dimen>
+    <dimen name="adaptive_47dp">47dp</dimen>
+    <dimen name="adaptive_48dp">48dp</dimen>
+    <dimen name="adaptive_49dp">49dp</dimen>
+    <dimen name="adaptive_50dp">50dp</dimen>
+    <dimen name="adaptive_51dp">51dp</dimen>
+    <dimen name="adaptive_52dp">52dp</dimen>
+    <dimen name="adaptive_53dp">53dp</dimen>
+    <dimen name="adaptive_54dp">54dp</dimen>
+    <dimen name="adaptive_55dp">55dp</dimen>
+    <dimen name="adaptive_56dp">56dp</dimen>
+    <dimen name="adaptive_57dp">57dp</dimen>
+    <dimen name="adaptive_58dp">58dp</dimen>
+    <dimen name="adaptive_59dp">59dp</dimen>
+    <dimen name="adaptive_60dp">60dp</dimen>
+    <dimen name="adaptive_61dp">61dp</dimen>
+    <dimen name="adaptive_62dp">62dp</dimen>
+    <dimen name="adaptive_63dp">63dp</dimen>
+    <dimen name="adaptive_64dp">64dp</dimen>
+    <dimen name="adaptive_65dp">65dp</dimen>
+    <dimen name="adaptive_66dp">66dp</dimen>
+    <dimen name="adaptive_67dp">67dp</dimen>
+    <dimen name="adaptive_68dp">68dp</dimen>
+    <dimen name="adaptive_69dp">69dp</dimen>
+    <dimen name="adaptive_70dp">70dp</dimen>
+    <dimen name="adaptive_71dp">71dp</dimen>
+    <dimen name="adaptive_72dp">72dp</dimen>
+    <dimen name="adaptive_73dp">73dp</dimen>
+    <dimen name="adaptive_74dp">74dp</dimen>
+    <dimen name="adaptive_75dp">75dp</dimen>
+    <dimen name="adaptive_76dp">76dp</dimen>
+    <dimen name="adaptive_77dp">77dp</dimen>
+    <dimen name="adaptive_78dp">78dp</dimen>
+    <dimen name="adaptive_79dp">79dp</dimen>
+    <dimen name="adaptive_80dp">80dp</dimen>
+    <dimen name="adaptive_81dp">81dp</dimen>
+    <dimen name="adaptive_82dp">82dp</dimen>
+    <dimen name="adaptive_83dp">83dp</dimen>
+    <dimen name="adaptive_84dp">84dp</dimen>
+    <dimen name="adaptive_85dp">85dp</dimen>
+    <dimen name="adaptive_86dp">86dp</dimen>
+    <dimen name="adaptive_87dp">87dp</dimen>
+    <dimen name="adaptive_88dp">88dp</dimen>
+    <dimen name="adaptive_89dp">89dp</dimen>
+    <dimen name="adaptive_90dp">90dp</dimen>
+    <dimen name="adaptive_91dp">91dp</dimen>
+    <dimen name="adaptive_92dp">92dp</dimen>
+    <dimen name="adaptive_93dp">93dp</dimen>
+    <dimen name="adaptive_94dp">94dp</dimen>
+    <dimen name="adaptive_95dp">95dp</dimen>
+    <dimen name="adaptive_96dp">96dp</dimen>
+    <dimen name="adaptive_97dp">97dp</dimen>
+    <dimen name="adaptive_98dp">98dp</dimen>
+    <dimen name="adaptive_99dp">99dp</dimen>
+
+    <dimen name="adaptive_10sp">8sp</dimen>
+    <dimen name="adaptive_11sp">9sp</dimen>
+    <dimen name="adaptive_12sp">10sp</dimen>
+    <dimen name="adaptive_13sp">11sp</dimen>
+    <dimen name="adaptive_14sp">12sp</dimen>
+    <dimen name="adaptive_15sp">13sp</dimen>
+    <dimen name="adaptive_16sp">14sp</dimen>
+    <dimen name="adaptive_17sp">15sp</dimen>
+    <dimen name="adaptive_18sp">16sp</dimen>
+    <dimen name="adaptive_19sp">17sp</dimen>
+    <dimen name="adaptive_20sp">18sp</dimen>
+    <dimen name="adaptive_21sp">21sp</dimen>
+    <dimen name="adaptive_22sp">22sp</dimen>
+    <dimen name="adaptive_23sp">23sp</dimen>
+    <dimen name="adaptive_24sp">24sp</dimen>
+    <dimen name="adaptive_25sp">25sp</dimen>
+    <dimen name="adaptive_26sp">26sp</dimen>
+    <dimen name="adaptive_27sp">27sp</dimen>
+    <dimen name="adaptive_28sp">28sp</dimen>
+    <dimen name="adaptive_29sp">29sp</dimen>
+    <dimen name="adaptive_30sp">30sp</dimen>
+
+</resources>

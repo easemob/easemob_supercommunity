@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:background="@color/transparent"
+    android:padding="@dimen/adaptive_10dp">
+
+    <ImageView
+        android:id="@+id/iv_headImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/portrait01"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/iv_showSelect"
+        android:layout_width="@dimen/adaptive_28dp"
+        android:layout_height="@dimen/adaptive_28dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+</RelativeLayout>

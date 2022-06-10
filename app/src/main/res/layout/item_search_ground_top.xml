@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/space_bgimg"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:background="@drawable/bg_cover_mask"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="@dimen/adaptive_16dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广场"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_16sp"
+            android:layout_marginStart="@dimen/adaptive_26dp"/>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/adaptive_22dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_30dp"
+                android:gravity="center"
+                android:background="@drawable/sp_search_transparent"
+                android:textColor="#999999"
+                android:text="搜你感兴趣的"
+                android:layout_marginStart="@dimen/adaptive_14dp"/>
+
+            <ImageView
+                android:layout_width="@dimen/adaptive_20dp"
+                android:layout_height="@dimen/adaptive_20dp"
+                android:src="@drawable/icon_search"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="@dimen/adaptive_14dp"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

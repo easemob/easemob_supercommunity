@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sheet_height"
+    android:background="@drawable/sp_bottom_sheet">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/adaptive_28dp"
+        android:layout_height="@dimen/adaptive_28dp"
+        android:layout_marginStart="@dimen/adaptive_17dp"
+        android:layout_marginTop="@dimen/adaptive_11dp"
+        android:background="@drawable/icon_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/adaptive_15dp"
+        android:paddingStart="@dimen/adaptive_20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_close">
+
+        <com.community.easeim.common.widget.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="@dimen/adaptive_88dp"
+            android:layout_height="@dimen/adaptive_88dp"
+            android:src="@drawable/cover_example" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/adaptive_16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="欢迎来到"
+                android:textColor="#929497"
+                android:textSize="@dimen/adaptive_16sp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:text="昭和米国物語玩家社区"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/adaptive_12dp"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/adaptive_6dp"
+                    android:layout_height="@dimen/adaptive_6dp"
+                    android:background="@drawable/sp_radius_48_27ae60" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/adaptive_2dp"
+                    android:text="25"
+                    android:textColor="#E0E0E0"
+                    android:textSize="@dimen/adaptive_12sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/adaptive_10dp"
+                    android:layout_height="@dimen/adaptive_10dp"
+                    android:layout_marginStart="@dimen/adaptive_5dp"
+                    android:layout_marginEnd="@dimen/adaptive_10dp"
+                    android:src="@drawable/icon_person" />
+
+                <View
+                    android:layout_width="@dimen/adaptive_1dp"
+                    android:layout_height="@dimen/adaptive_10dp"
+                    android:layout_marginStart="@dimen/adaptive_2dp"
+                    android:background="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/adaptive_10dp"
+                    android:text="本社区共有2.3万区友"
+                    android:textColor="#E0E0E0"
+                    android:textSize="@dimen/adaptive_12sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_describe"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_20dp"
+        android:layout_marginTop="@dimen/adaptive_22dp"
+        android:layout_marginEnd="@dimen/adaptive_20dp"
+        android:text="昭和66年，日本凭借强大的经济实力，买下了大半个美国；大量日本移民涌入美国，将美国变为日本的“文化殖民地”。"
+        android:textColor="#929497"
+        android:textSize="@dimen/adaptive_14sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_title" />
+
+    <LinearLayout
+        android:id="@+id/ll_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_26dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/adaptive_20dp"
+        android:paddingEnd="@dimen/adaptive_10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_describe">
+
+        <com.community.easeim.common.widget.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/adaptive_36dp"
+            android:layout_height="@dimen/adaptive_36dp"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:text="ChokoChigusa"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <View
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="区长"
+            android:textColor="#929497"
+            android:textSize="@dimen/adaptive_16sp" />
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/icon_go" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:layout_marginStart="@dimen/adaptive_65dp"
+        android:layout_marginTop="@dimen/adaptive_10dp"
+        android:background="#47464B"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_admin" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_15dp"
+        android:layout_marginTop="@dimen/adaptive_18dp"
+        android:text="这里聊的正欢:"
+        android:textColor="#929497"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+    <LinearLayout
+        android:id="@+id/ll_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <LinearLayout
+            android:id="@+id/ll_ground_hall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/adaptive_22dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/adaptive_28dp"
+                android:layout_marginEnd="@dimen/adaptive_18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/adaptive_28dp"
+                    android:layout_height="@dimen/adaptive_28dp"
+                    android:src="@drawable/icon_court" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/adaptive_9dp"
+                    android:text="社区大厅"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adaptive_16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/adaptive_16dp"
+                    android:minWidth="@dimen/adaptive_16dp"
+                    android:maxHeight="@dimen/adaptive_16dp"
+                    android:gravity="center"
+                    android:background="@drawable/sp_unread_bg"
+                    android:text=" 88 "
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adaptive_16sp" />
+
+                <ImageView
+                    android:layout_width="@dimen/adaptive_16dp"
+                    android:layout_height="@dimen/adaptive_16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_go" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_1dp"
+                android:layout_marginStart="@dimen/adaptive_65dp"
+                android:layout_marginTop="@dimen/adaptive_14dp"
+                android:background="#47464B" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_casual_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/adaptive_14dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/adaptive_28dp"
+                android:layout_marginEnd="@dimen/adaptive_18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/adaptive_28dp"
+                    android:layout_height="@dimen/adaptive_28dp"
+                    android:src="@drawable/icon_jing"
+                    android:textColor="#929497" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/adaptive_9dp"
+                    android:text="随便聊聊"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adaptive_16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="@dimen/adaptive_16dp"
+                    android:layout_height="@dimen/adaptive_16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_go" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_1dp"
+                android:layout_marginStart="@dimen/adaptive_65dp"
+                android:layout_marginTop="@dimen/adaptive_14dp"
+                android:background="#47464B" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/adaptive_14dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/adaptive_28dp"
+                android:layout_marginEnd="@dimen/adaptive_18dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/adaptive_28dp"
+                    android:layout_height="@dimen/adaptive_28dp"
+                    android:src="@drawable/icon_voice"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/adaptive_9dp"
+                    android:text="随便听听"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/adaptive_16sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="@dimen/adaptive_16dp"
+                    android:layout_height="@dimen/adaptive_16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_go" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/adaptive_1dp"
+                android:layout_marginStart="@dimen/adaptive_65dp"
+                android:layout_marginTop="@dimen/adaptive_14dp"
+                android:background="#47464B" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ground_action"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_30dp"
+        android:layout_marginBottom="@dimen/adaptive_30dp"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/adaptive_24dp"
+        android:paddingEnd="@dimen/adaptive_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:id="@+id/tv_hang_out"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/adaptive_40dp"
+            android:layout_marginEnd="@dimen/adaptive_6dp"
+            android:layout_weight="1"
+            android:onClick="onAddClick"
+            android:background="@drawable/sp_radius_48_3e3f40"
+            android:gravity="center"
+            android:text="随意逛逛"
+            android:textColor="#27AE60"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <TextView
+            android:id="@+id/tv_join_ground"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/adaptive_40dp"
+            android:layout_marginStart="@dimen/adaptive_6dp"
+            android:layout_weight="1"
+            android:background="@drawable/sp_radius_48_27ae60"
+            android:gravity="center"
+            android:text="加入社区"
+            android:onClick="onChatClick"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

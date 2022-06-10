@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/em_login_color_bg">
+
+    <com.community.easeim.imkit.widget.EaseTitleBar
+        android:id="@+id/toolbar_register"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleBarArrowColor="@color/white"/>
+
+    <TextView
+        android:id="@+id/tv_register_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/et_login_name"
+        android:layout_marginBottom="20dp"
+        android:text="@string/em_login_tv_register"
+        android:textSize="18sp"
+        android:textColor="@color/em_login_color_text"/>
+
+    <EditText
+        android:id="@+id/et_login_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.25"
+        android:hint="@string/em_login_name_hint"
+        style="@style/em_login_et_input" />
+
+    <EditText
+        android:id="@+id/et_login_pwd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_login_name"
+        app:layout_constraintBottom_toTopOf="@id/et_login_pwd_confirm"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:hint="@string/em_login_password_hint"
+        style="@style/em_login_et_input"/>
+
+    <EditText
+        android:id="@+id/et_login_pwd_confirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_login_pwd"
+        app:layout_constraintBottom_toTopOf="@id/cb_select"
+        android:layout_marginTop="20dp"
+        android:inputType="textPassword"
+        android:hint="@string/em_register_password_confirm_hint"
+        style="@style/em_login_et_input"/>
+
+    <CheckBox
+        android:id="@+id/cb_select"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:padding="3dp"
+        android:layout_marginTop="@dimen/em_margin_10"
+        app:layout_constraintTop_toBottomOf="@id/et_login_pwd_confirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:button="@drawable/demo_cb_agreement_select"
+        android:textSize="12sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="50dp"/>
+
+    <TextView
+        android:id="@+id/tv_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/cb_select"
+        app:layout_constraintTop_toTopOf="@id/cb_select"
+        app:layout_constraintBottom_toBottomOf="@id/cb_select"
+        android:layout_marginLeft="5dp"
+        android:text="@string/em_login_agreement"
+        android:textSize="12sp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_agreement"
+        style="@style/em_login_btn"
+        android:text="@string/em_register_btn"
+        android:layout_marginTop="@dimen/em_margin_20"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/title_margin"
+    android:background="@color/my_common_color"
+    android:id="@+id/ll_root"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/adaptive_14dp"
+        android:layout_marginBottom="@dimen/adaptive_8dp"
+        android:text="消息"
+        android:textSize="@dimen/adaptive_19sp"
+        android:textColor="@color/white"
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.community.easeim.imkit.modules.conversation.EaseConversationListLayout
+            android:id="@+id/list_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:ease_con_item_unread_dot_position="right"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

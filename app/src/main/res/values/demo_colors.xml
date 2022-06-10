@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="red">#ffff0000</color>
+    <color name="white">#feffffff</color>
+    <color name="gray">#ffe9e9e9</color>
+    <color name="blue">#FF5A5DD0</color>
+    <color name="black">#ff000000</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="color_transparent">#00000000</color>
+
+    <color name="common_bg">#fff9f9f9</color>
+    <color name="em_color_brand">#ff04aef0</color>
+    <color name="em_color_warning">#ffff2b2b</color>
+    <color name="em_color_common_text_black">#ff333333</color>
+    <color name="em_color_common_text_gray">#ff999999</color>
+
+    <color name="em_base_color_primary">#ffffff</color>
+    <color name="em_base_color_primary_dark">#ffffff</color>
+    <color name="em_base_color_accent">@color/blue</color>
+    <color name="em_base_color_window_bg">@color/white</color>
+    <color name="em_base_color_text_hint">#ffcccccc</color>
+    <color name="em_base_color_divider">#fff2f2f2</color>
+
+    <color name="em_toast_color_bg">#99000000</color>
+    <color name="em_toast_color_text">@color/white</color>
+
+    <color name="em_login_color_bg">#4c000000</color>
+    <color name="em_login_color_btn_unable">#44000000</color>
+    <color name="em_login_color_btn_enable_left">#ff04aef0</color>
+    <color name="em_login_color_btn_enable_right">#ff5a5dd0</color>
+    <color name="em_login_color_btn_text_unable">#ffffffff</color>
+    <color name="em_login_color_btn_text_enable">#FFF4F4F4</color>
+    <color name="em_login_color_text">@color/white</color>
+    <color name="em_login_color_btn_right_unable">#44f2f2f2</color>
+    <color name="em_login_color_btn_right_enable">@color/white</color>
+
+    <color name="em_switch_color_checked">#ff48c890</color>
+    <color name="em_switch_color_unchecked">#ffe9e9e9</color>
+
+    <color name="em_server_set_color_title">@color/white</color>
+
+    <color name="em_main_color_tab_normal">@color/em_color_common_text_black</color>
+    <color name="em_main_color_tab_selected">#ff04aef0</color>
+
+    <color name="em_empty_layout_color_text">#ffcccccc</color>
+
+
+
+    <color name="em_friends_contact_detail_text_normal">@color/em_color_common_text_black</color>
+    <color name="em_friends_contact_detail_text_brand">@color/em_color_brand</color>
+
+    <color name="holo_black">#ff111111</color>
+    <color name="bg_tools_panel">#2F2F2F</color>
+    <color name="em_indicator_select">#9E9E9E</color>
+    <color name="em_indicator_normal">#1AFFFFFF</color>
+    <color name="black_deep">#FF000000</color>
+    <color name="recall_black_38">#ffA3A3A3</color>
+    <color name="recall_black">#61212121</color>
+    <color name="em_blue">#1E88E5</color>
+    <color name="em_blue_pressed">#0000aF</color>
+    <color name="btn_register_normal">#ffffff</color>
+    <color name="btn_register_pressed">#00acff</color>
+    <color name="btn_login_normal">#00acff</color>
+    <color name="btn_login_pressed">#46678d</color>
+    <color name="btn_pressed_green_solid">#B6DA53</color>
+    <color name="btn_logout_normal">#d33f3f</color>
+    <color name="btn_logout_pressed">#DA5A4D</color>
+
+    <color name="bg_sheet">#1f1f1f</color>
+    <color name="my_common_color">#141414</color>
+
+    <color name="green_bg">#27AE60</color>
+    <color name="default_divider_color">#47464B</color>
+
+</resources>

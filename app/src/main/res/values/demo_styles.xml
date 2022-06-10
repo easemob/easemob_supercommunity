@@ -1,0 +1,266 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/em_base_color_primary</item>
+        <item name="colorPrimaryDark">@color/em_base_color_primary_dark</item>
+        <item name="colorAccent">@color/em_base_color_accent</item>
+        <!-- Customize EditText text color -->
+        <item name="android:editTextColor">@color/black</item>
+        <!-- Customize text cursor -->
+        <item name="android:textCursorDrawable">@drawable/demo_text_cursor_drawable</item>
+        <!-- Customize text color hint -->
+        <item name="android:textColorHint">@color/em_base_color_text_hint</item>
+        <item name="android:windowBackground">@color/em_base_color_window_bg</item>
+        <item name="android:divider">@drawable/demo_default_divider_list</item>
+        <!-- remove button default shadow effect -->
+        <item name="android:buttonStyle">@style/Button.BorderLess</item>
+    </style>
+
+    <style name="NoActionBar.Dark" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+
+    <style name="NoActionBar.SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowBackground">@android:color/transparent</item>-->
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:windowNoTitle">true</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <!--指定Dialog的主题-->
+    <style name="Dialog.Light" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/em_base_color_accent</item>
+    </style>
+
+    <style name="AppTheme.AddContactTheme" parent="AppTheme">
+        <item name="searchViewStyle">@style/SearchView.AddContact</item>
+    </style>
+
+    <style name="SearchView.AddContact" parent="Widget.AppCompat.SearchView">
+        <!--默认hint-->
+        <item name="defaultQueryHint">@string/em_search_text_hint</item>
+        <!--搜索框内的搜索图标-->
+        <item name="searchHintIcon">@drawable/ease_search_icon</item>
+        <!--清理按钮图标-->
+        <item name="closeIcon">@drawable/em_search_close</item>
+        <item name="android:background">@drawable/demo_search_tv_bg_shape</item>
+    </style>
+
+    <style name="Toolbar.EaseBar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+
+    <style name="AppTheme.TabLayout" parent="AppTheme">
+        <item name="android:textSize">@dimen/em_size_big</item>
+    </style>
+
+    <!-- 覆盖easeui中对于toolbar的设置,将主题设置为Dark模式 -->
+<!--    <style name="Toolbar.PopupTheme" parent="ThemeOverlay.AppCompat.Dark">-->
+<!--        &lt;!&ndash;设置背景色&ndash;&gt;-->
+<!--&lt;!&ndash;        <item name="android:background">@color/black</item>&ndash;&gt;-->
+<!--        &lt;!&ndash;设置字体颜色&ndash;&gt;-->
+<!--        <item name="android:textColor">@color/white</item>-->
+<!--        &lt;!&ndash;设置不覆盖锚点，即不覆盖三个点&ndash;&gt;-->
+<!--        <item name="overlapAnchor">false</item>-->
+<!--    </style>-->
+
+    <style name="Button.BorderLess" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="ActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close_exit</item>
+    </style>
+
+    <style name="main_bottom_view_normal">
+        <item name="android:textColor">@color/em_main_color_tab_normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="main_bottom_view_selected">
+        <item name="android:textColor">@color/em_main_color_tab_selected</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="style_call_tools_panel_button">
+        <item name="android:layout_width">@dimen/adaptive_56dp</item>
+        <item name="android:layout_height">@dimen/adaptive_56dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:background">@drawable/em_call_btn_bg</item>
+    </style>
+
+    <style name="style_call_tools_panel_button_wrapper">
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="style_debug_detail">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">10dip</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">@dimen/adaptive_18sp</item>
+    </style>
+
+    <style name="em_login_et_input">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:layout_marginLeft">@dimen/em_login_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/em_login_margin_right</item>
+        <item name="android:maxWidth">400dp</item>
+        <item name="android:background">@drawable/demo_login_et_bg</item>
+        <item name="android:paddingLeft">@dimen/em_login_padding_left</item>
+        <item name="android:paddingRight">@dimen/em_login_padding_right</item>
+        <item name="android:textSize">@dimen/em_login_text_size</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:inputType">text</item>
+    </style>
+
+    <style name="em_login_tv_other">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:minWidth">70dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginBottom">44dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/demo_login_tv_click_selector</item>
+    </style>
+
+    <style name="em_login_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginLeft">@dimen/em_login_margin_left</item>
+        <item name="android:layout_marginRight">@dimen/em_login_margin_right</item>
+        <item name="android:background">@drawable/demo_login_btn_bg</item>
+        <item name="android:foreground">@drawable/demo_ripple_click_gray</item>
+        <item name="android:textColor">@color/demo_login_btn_text_color</item>
+        <item name="android:enabled">true</item>
+        <item name="android:textSize">16sp</item>
+<!--        <item name="android:drawableRight">@drawable/demo_login_btn_right_unable</item>-->
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingStart">5dp</item>
+    </style>
+
+<!--     android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sp_unread_bg"
+        android:gravity="center"
+        android:maxHeight="@dimen/adaptive_16dp"
+        android:minWidth="@dimen/adaptive_16dp"
+        android:text="8"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/adaptive_12sp"-->
+    <style name="em_main_badge_tv">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/em_main_badge_margin_top</item>
+        <item name="android:layout_marginLeft">@dimen/em_main_badge_margin_left</item>
+        <item name="android:layout_marginStart">@dimen/em_main_badge_margin_left</item>
+        <item name="android:background">@drawable/sp_unread_bg</item>
+        <item name="minWidth">@dimen/adaptive_16dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="minHeight">@dimen/adaptive_16dp</item>
+        <item name="maxHeight">@dimen/adaptive_16dp</item>
+        <item name="android:textSize">@dimen/adaptive_12sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="em_friends_contact_detail_tv">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/em_size_big_notify</item>
+        <item name="android:textColor">@color/em_friends_contact_detail_text_brand</item>
+        <item name="android:foreground">?selectableItemBackground</item>
+        <item name="android:background">@color/em_base_color_window_bg</item>
+    </style>
+
+    <style name="em_contact_sidebar_floating_header">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/ease_show_head_toast_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:visibility">gone</item>
+    </style>
+
+    <style name="em_group_text_item_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/em_margin_15</item>
+        <item name="android:paddingLeft">@dimen/em_margin_20</item>
+        <item name="android:paddingStart">@dimen/em_margin_20</item>
+        <item name="android:textSize">@dimen/em_size_big</item>
+        <item name="android:textColor">@color/em_color_common_text_black</item>
+    </style>
+
+    <style name="em_group_arrow_item">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/em_common_item_height</item>
+        <item name="android:foreground">@drawable/demo_ripple_click_gray</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="demo_search_et_style">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/em_margin_15</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:background">@drawable/demo_dialog_edit_bg_shape</item>
+        <item name="android:drawableLeft">@drawable/ease_search_icon</item>
+        <item name="android:drawablePadding">@dimen/em_margin_10</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionSearch</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PxBlurringView">
+        <attr name="blurRadius" format="integer"/>
+        <attr name="downsampleFactor" format="integer"/>
+        <attr name="overlayColor" format="color"/>
+        <attr name="top_left_radius" format="dimension" />
+        <attr name="top_right_radius" format="dimension" />
+        <attr name="bottom_right_radius" format="dimension" />
+        <attr name="bottom_left_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="radius" format="dimension" />
+        <attr name="left_top_radius" format="dimension" />
+        <attr name="right_top_radius" format="dimension" />
+        <attr name="right_bottom_radius" format="dimension" />
+        <attr name="left_bottom_radius" format="dimension" />
+    </declare-styleable>
+</resources>

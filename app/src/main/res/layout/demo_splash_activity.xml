@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_common_color">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_splash"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/adaptive_85dp"
+            android:layout_height="@dimen/adaptive_85dp"
+            android:src="@drawable/splash_logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="@dimen/adaptive_28dp"
+            android:letterSpacing="0.5"
+            android:text="环信超级社区"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_24sp" />
+
+        <TextView
+            android:id="@+id/tv_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="@dimen/adaptive_13dp"
+            android:layout_marginBottom="80dp"
+            android:text="@string/demo_app_product_name"
+            android:textColor="#696969"
+            android:textSize="@dimen/adaptive_15sp" />
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1f1f1f"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/adaptive_14dp"
+    android:paddingEnd="@dimen/adaptive_16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/adaptive_14dp">
+
+        <ImageView
+            android:id="@+id/iv_title"
+            android:layout_width="@dimen/adaptive_30dp"
+            android:layout_height="@dimen/adaptive_30dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:gravity="center"
+            android:src="@drawable/icon_jing" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_6dp"
+            android:layout_weight="1"
+            android:text="文字频道"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_16sp" />
+
+        <CheckBox
+            android:id="@+id/cb"
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:button="@null"
+            android:clickable="false"
+            android:background="@drawable/select_create_channel" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:layout_marginStart="@dimen/adaptive_56dp"
+        android:background="#47464B" />
+</LinearLayout>

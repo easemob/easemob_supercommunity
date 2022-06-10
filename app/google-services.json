@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "xxxxxxxxx自行替换对应数值",
+    "project_id": "xxxxxxxxx",
+    "storage_bucket": "xxxxxxxxxxxxx"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "xxxxxxxxxxxxx",
+        "android_client_info": {
+          "package_name": "com.community.easeim"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "xxxxxxxxx.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "xxxxxxxxx"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "xxxxxxxxxxxxx.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

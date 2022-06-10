@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_offline_push_settings"
+    android:background="@color/my_common_color"
+    android:paddingTop="@dimen/title_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back" />
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:layout_weight="1"
+            android:text="@string/push_settings"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <ImageView
+            android:id="@+id/iv_invite"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:onClick="onInviteClick"
+            android:visibility="gone"
+            android:src="@drawable/icon_ground_add" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="@dimen/adaptive_30dp"
+            android:layout_height="@dimen/adaptive_30dp"
+            android:layout_marginStart="@dimen/adaptive_5dp"
+            android:layout_marginEnd="@dimen/adaptive_5dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_more" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:switchItemTitleColor="@color/white"
+            android:gravity="bottom|left"
+            android:padding="10dip"
+            android:text="@string/push_no_disturb"
+            android:textColor="@color/btn_gray_pressed" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:background="@drawable/demo_default_divider_list" />
+    </LinearLayout>
+
+
+    <com.community.easeim.common.widget.SwitchItemView
+        android:id="@+id/switch_push_no_disturb"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        app:switchItemTitle="@string/offline_push_no_disturb"
+        app:switchItemTitleColor="@color/white"
+        app:switchItemShowDivider="true"
+        app:switchItemTitleSize="@dimen/em_size_normal"
+        android:background="@color/my_common_color"/>
+
+
+    <com.community.easeim.common.widget.ArrowItemView
+        android:id="@+id/item_push_time_range"
+        android:layout_width="match_parent"
+        app:switchItemTitleColor="@color/white"
+        android:layout_height="@dimen/em_common_item_height"
+        app:arrowItemTitle="@string/demo_no_disturb_time"
+        app:arrowItemContent="@string/offline_default_time_range"
+        app:arrowItemTitleSize="14sp"
+        android:visibility="gone"
+        android:background="@color/white"/>
+
+    <com.community.easeim.common.widget.SwitchItemView
+        android:id="@+id/rl_custom_server"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        app:switchItemTitle="@string/push_use_fcm"
+        app:switchItemTitleColor="@color/white"
+        app:switchItemShowDivider="true"
+        android:visibility="gone"
+        app:switchItemTitleSize="@dimen/em_size_normal"
+        android:background="@color/my_common_color"/>
+
+
+</LinearLayout>

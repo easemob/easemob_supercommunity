@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sheet_height"
+    android:background="@drawable/sp_bottom_sheet">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/adaptive_28dp"
+        android:layout_height="@dimen/adaptive_28dp"
+        android:layout_marginStart="@dimen/adaptive_17dp"
+        android:layout_marginTop="@dimen/adaptive_11dp"
+        android:background="@drawable/icon_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_15dp"
+        android:text="邀请好友加入社区"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_close" />
+
+    <LinearLayout
+        android:id="@+id/ll_add_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_15dp"
+        android:layout_marginTop="@dimen/adaptive_36dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <TextView
+            android:id="@+id/tv_invite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/black"
+            android:paddingStart="@dimen/adaptive_18dp"
+            android:paddingTop="@dimen/adaptive_23dp"
+            android:paddingEnd="@dimen/adaptive_18dp"
+            android:paddingBottom="@dimen/adaptive_23dp"
+            android:text="Hello！欢迎来「社区名」和我一起嗨！打开⬇️链接：https://www.easemob.com/download/app/discord_demo"
+            android:textColor="#929497"
+            android:textSize="@dimen/adaptive_16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_copy_invitation_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_22dp"
+            android:layout_marginEnd="@dimen/adaptive_27dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/adaptive_36dp"
+                android:layout_height="@dimen/adaptive_36dp"
+                android:src="@drawable/icon_copycode" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/adaptive_8dp"
+                android:text="复制邀请码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_share_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_15dp"
+        android:layout_marginTop="@dimen/adaptive_49dp"
+        android:text="分享给我的好友"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_add_code" />
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:layout_marginTop="@dimen/adaptive_17dp"
+        android:background="#282828"
+        app:layout_constraintTop_toBottomOf="@id/tv_share_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_members"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/v_divider" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

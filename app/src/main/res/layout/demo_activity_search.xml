@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/title_margin"
+    android:background="@color/my_common_color"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:layout_weight="1"
+            android:text="聊天详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/query"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/em_common_search_height"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/tv_cancel"
+        app:layout_constraintTop_toBottomOf="@id/ll_title"
+        android:hint="@string/search"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        style="@style/demo_search_et_style" />
+
+    <ImageButton
+        android:id="@+id/search_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/query"
+        app:layout_constraintBottom_toBottomOf="@id/query"
+        app:layout_constraintRight_toRightOf="@id/query"
+        android:layout_marginRight="3dp"
+        android:background="@android:color/transparent"
+        android:padding="6dp"
+        android:src="@drawable/ease_search_clear"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/query"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/query"
+        app:layout_constraintBottom_toBottomOf="@id/query"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textSize="@dimen/em_size_normal"
+        android:textColor="@color/em_color_brand"
+        android:layout_marginRight="@dimen/em_margin_15"
+        android:layout_marginEnd="@dimen/em_margin_15"
+        android:layout_marginLeft="@dimen/em_margin_15"
+        android:layout_marginStart="@dimen/em_margin_15"/>
+
+    <com.community.easeim.imkit.widget.EaseRecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/em_margin_10"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/query"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/ease_conversation_color_item_time"
+        android:textSize="13sp"
+        tools:text="09:51"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/time"
+        android:layout_marginTop="18dp"
+        android:minHeight="122dp"
+        android:background="@drawable/sp_radius_18_47464b"
+        android:layout_marginLeft="@dimen/em_margin_15"
+        android:layout_marginStart="@dimen/em_margin_15"
+        android:layout_marginRight="@dimen/em_margin_15"
+        android:layout_marginEnd="@dimen/em_margin_15">
+
+        <com.community.easeim.imkit.widget.EaseImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/adaptive_38dp"
+            android:layout_height="@dimen/adaptive_38dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="33dp"
+            android:padding="5dp"
+            android:background="@drawable/icon_invite"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            tools:text="name"
+            app:layout_constraintTop_toTopOf="@id/avatar"
+            app:layout_constraintBottom_toTopOf="@id/message"
+            app:layout_constraintLeft_toRightOf="@id/avatar" />
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textColor="#ffa3a3a3"
+            android:textSize="@dimen/em_size_normal"
+            tools:text="content"
+            android:layout_marginRight="@dimen/em_margin_20"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/avatar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

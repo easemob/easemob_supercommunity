@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_common_color"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/title_margin"
+    tools:context=".section.group.activity.GroupMsgDisturbActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:layout_weight="1"
+            android:text="通知设定"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/adaptive_16dp"
+            android:text="保存"
+            android:textColor="#34B76B"
+            android:textSize="@dimen/adaptive_18sp" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="@dimen/adaptive_10dp"
+            android:text="所有消息"
+            android:textColor="@color/white" />
+
+
+
+        <CheckBox
+            android:id="@+id/cb_all_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/radio_button_bg"
+            android:padding="@dimen/adaptive_10dp"
+            android:gravity="center"
+             />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:background="#47464B"
+        app:layout_constraintTop_toBottomOf="@id/tv_share_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_title">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:padding="@dimen/adaptive_10dp"
+            android:text="不通知任何消息"
+            android:textColor="@color/white" />
+
+
+        <CheckBox
+            android:id="@+id/cb_no_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:button="@drawable/radio_button_bg"
+            android:padding="@dimen/adaptive_10dp"
+            android:gravity="center"
+            />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:background="#47464B"
+        app:layout_constraintTop_toBottomOf="@id/tv_share_title" />
+</LinearLayout>

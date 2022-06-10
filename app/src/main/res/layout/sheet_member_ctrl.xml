@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#1f1f1f"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.community.easeim.common.widget.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="@dimen/adaptive_36dp"
+            android:layout_height="@dimen/adaptive_36dp"
+            android:src="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="昵称"
+            android:paddingTop="@dimen/adaptive_16dp"
+            android:paddingBottom="@dimen/adaptive_16dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp"
+            android:layout_marginStart="@dimen/adaptive_14dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/my_common_color"/>
+
+    <TextView
+        android:id="@+id/tv_2_black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="关进小黑屋"
+        android:textColor="#929497"
+        android:paddingTop="@dimen/adaptive_16dp"
+        android:paddingBottom="@dimen/adaptive_16dp"
+        android:textSize="@dimen/adaptive_18sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/my_common_color"/>
+
+    <TextView
+        android:id="@+id/tv_cadre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="提干"
+        android:textColor="#929497"
+        android:paddingTop="@dimen/adaptive_16dp"
+        android:paddingBottom="@dimen/adaptive_16dp"
+        android:textSize="@dimen/adaptive_18sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/my_common_color"/>
+
+    <TextView
+        android:id="@+id/tv_kick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="踢出本社区"
+        android:textColor="#929497"
+        android:paddingTop="@dimen/adaptive_16dp"
+        android:paddingBottom="@dimen/adaptive_16dp"
+        android:textSize="@dimen/adaptive_18sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/my_common_color"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:paddingTop="@dimen/adaptive_16dp"
+        android:paddingBottom="@dimen/adaptive_16dp"
+        android:textSize="@dimen/adaptive_18sp"/>
+</LinearLayout>

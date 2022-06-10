@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_common_color">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@drawable/mine_bgimg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:background="@drawable/bg_cover_mask"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        android:layout_marginTop="@dimen/title_margin"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:layout_weight="1"
+            android:text="详情"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_more"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_follow"
+        android:onClick="onFollowClick"
+        android:layout_width="@dimen/adaptive_96dp"
+        android:layout_height="@dimen/adaptive_36dp"
+        android:layout_marginEnd="@dimen/adaptive_16dp"
+        android:layout_marginBottom="@dimen/adaptive_14dp"
+        android:background="@drawable/sp_radius_48_27ae60"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/iv_bg"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_follow"
+            android:layout_width="@dimen/adaptive_22dp"
+            android:layout_height="@dimen/adaptive_22dp"
+            android:src="@drawable/icon_like_detail" />
+
+        <TextView
+            android:id="@+id/tv_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_4dp"
+            android:gravity="center"
+            android:text="喜欢Ta"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_16sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_18dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="12.8W"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="被喜欢"
+                android:textColor="#929497"
+                android:textSize="@dimen/adaptive_14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/adaptive_36dp"
+            android:layout_marginStart="@dimen/adaptive_16dp"
+            android:layout_marginEnd="@dimen/adaptive_16dp"
+            android:background="#C4C4C4" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/adaptive_24dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="1400"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="喜欢"
+                android:textColor="#929497"
+                android:textSize="@dimen/adaptive_14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.community.easeim.common.widget.CircleImageView
+        android:id="@+id/civ_head"
+        android:layout_width="@dimen/adaptive_64dp"
+        android:layout_height="@dimen/adaptive_64dp"
+        android:layout_marginStart="@dimen/adaptive_16dp"
+        android:layout_marginTop="132dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_16dp"
+        android:layout_marginTop="@dimen/adaptive_16dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/civ_head" />
+
+    <LinearLayout
+        android:id="@+id/ll_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_13dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/adaptive_18dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_name">
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/sp_radius_48_47464b"
+            android:paddingStart="@dimen/adaptive_6dp"
+            android:paddingEnd="@dimen/adaptive_6dp"
+            android:paddingTop="@dimen/adaptive_2dp"
+            android:paddingBottom="@dimen/adaptive_2dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_14sp" />
+
+        <ImageView
+            android:id="@+id/iv_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="@dimen/adaptive_8dp"
+            android:src="@drawable/icon_male" />
+
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_8dp"
+            android:textColor="#929497"
+            android:textSize="@dimen/adaptive_16sp"
+            tools:text="18岁" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_16dp"
+        android:layout_marginTop="@dimen/adaptive_16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ll_detail">
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个性签名："
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_16sp" />
+
+        <TextView
+            android:id="@+id/tv_des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="社会路难走"
+            android:textColor="#929497"
+            android:textSize="@dimen/adaptive_16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="117dp"
+        android:src="@drawable/illustration"
+        app:layout_constraintBottom_toTopOf="@id/ll_chat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/adaptive_30dp"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/adaptive_24dp"
+        android:paddingEnd="@dimen/adaptive_24dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/adaptive_48dp"
+            android:layout_marginEnd="@dimen/adaptive_6dp"
+            android:layout_weight="1"
+            android:background="@drawable/sp_radius_48_3e3f40"
+            android:gravity="center"
+            android:onClick="onAddClick"
+            android:text="加好友"
+            android:textColor="#27AE60"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <TextView
+            android:id="@+id/tv_chat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/adaptive_48dp"
+            android:layout_marginStart="@dimen/adaptive_6dp"
+            android:layout_weight="1"
+            android:background="@drawable/sp_radius_48_27ae60"
+            android:gravity="center"
+            android:onClick="onChatClick"
+            android:text="私聊TA"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

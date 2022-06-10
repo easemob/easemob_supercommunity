@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sheet_height"
+    android:background="@drawable/sp_bottom_sheet">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/adaptive_28dp"
+        android:layout_height="@dimen/adaptive_28dp"
+        android:layout_marginStart="@dimen/adaptive_17dp"
+        android:layout_marginTop="@dimen/adaptive_11dp"
+        android:background="@drawable/icon_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_15dp"
+        android:text="创建一个频道"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_close" />
+
+    <TextView
+        android:id="@+id/tv_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:paddingTop="@dimen/adaptive_15dp"
+        android:paddingEnd="@dimen/adaptive_21dp"
+        android:text="创建"
+        android:textColor="#929497"
+        android:textSize="@dimen/adaptive_18sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_16dp"
+        android:layout_marginTop="@dimen/adaptive_35dp"
+        android:layout_marginEnd="@dimen/adaptive_16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="频道名"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="必填项"
+            android:textColor="#929497"
+            android:textSize="@dimen/adaptive_16sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_channel_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="16字以内"
+        android:layout_marginTop="@dimen/adaptive_12dp"
+        android:textColorHint="#A7A9AC"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:textColor="@color/white"
+        android:background="@color/transparent"
+        android:textSize="@dimen/adaptive_18sp"
+        android:paddingStart="@dimen/adaptive_18dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_title"/>
+
+    <View
+        android:id="@+id/v_divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:layout_marginTop="@dimen/adaptive_8dp"
+        app:layout_constraintTop_toBottomOf="@id/et_channel_name"
+        android:background="#47464B"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_select"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/v_divider"
+        android:layout_height="wrap_content">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+</androidx.constraintlayout.widget.ConstraintLayout>

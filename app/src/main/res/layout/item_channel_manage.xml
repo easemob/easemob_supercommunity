@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="#1f1f1f"
+    android:paddingStart="@dimen/adaptive_20dp"
+    android:paddingBottom="@dimen/adaptive_14dp"
+    android:paddingTop="@dimen/adaptive_14dp"
+    android:paddingEnd="@dimen/adaptive_18dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_delete"
+        android:layout_width="@dimen/adaptive_20dp"
+        android:layout_height="@dimen/adaptive_20dp"
+        android:src="@drawable/icon_delete_red" />
+
+    <ImageView
+        android:layout_width="@dimen/adaptive_30dp"
+        android:layout_height="@dimen/adaptive_30dp"
+        android:layout_marginStart="@dimen/adaptive_12dp"
+        android:src="@drawable/icon_jing" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_12dp"
+        android:layout_weight="1"
+        android:text="我加入的频道"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_18sp" />
+
+    <ImageView
+        android:layout_width="@dimen/adaptive_20dp"
+        android:layout_height="@dimen/adaptive_20dp"
+        android:src="@drawable/icon_sequence" />
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/my_common_color"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/adaptive_12dp"
+        android:paddingBottom="@dimen/adaptive_12dp"
+        android:paddingStart="@dimen/adaptive_20dp"
+        android:paddingEnd="@dimen/adaptive_20dp"
+        android:gravity="center_vertical">
+
+        <com.community.easeim.common.widget.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="@dimen/adaptive_32dp"
+            android:layout_height="@dimen/adaptive_32dp"
+            android:src="@drawable/default_head"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp"
+            android:layout_marginStart="@dimen/adaptive_12dp"
+            android:text="测试啊阿萨大大"/>
+
+        <ImageView
+            android:id="@+id/iv_speaker"
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:button="@null"
+            android:layout_marginEnd="@dimen/adaptive_10dp"
+            android:background="@drawable/icon_speaker_closed"/>
+
+        <ImageView
+            android:id="@+id/iv_mic"
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:layout_marginEnd="@dimen/adaptive_10dp"
+            android:src="@drawable/icon_mic_closed"/>
+
+        <ImageView
+            android:id="@+id/iv_talking"
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/adaptive_10dp"
+            android:src="@drawable/icon_talking"/>
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_more"/>
+    </LinearLayout>
+
+    <View
+        android:layout_marginStart="@dimen/adaptive_64dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#47464B"/>
+
+
+</LinearLayout>

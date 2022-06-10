@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sp_radius_18_3e3f40"
+    android:paddingBottom="@dimen/adaptive_20dp">
+
+    <View
+        android:id="@+id/view_top"
+        android:layout_width="wrap_content"
+        android:layout_height="0.01dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_31dp"
+        android:layout_marginTop="@dimen/adaptive_24dp"
+        android:layout_marginEnd="@dimen/adaptive_31dp"
+        android:layout_marginBottom="@dimen/adaptive_24dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top"
+        app:layout_goneMarginBottom="@dimen/em_dialog_title_gone_margin_bottom"
+        app:layout_goneMarginTop="@dimen/em_dialog_title_gone_margin_top"
+        tools:text="标题" />
+
+    <TextView
+        android:id="@+id/tv_dialog_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_11dp"
+        android:gravity="center"
+        android:text="删除后不可恢复，三思啊！"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_14sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_title" />
+
+    <LinearLayout
+        android:id="@+id/fl_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_24dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_dialog_msg">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/adaptive_23dp"
+            android:paddingEnd="@dimen/adaptive_11dp">
+
+            <TextView
+                android:id="@+id/btn_dialog_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/select_dialog_cancel"
+                android:gravity="center"
+                android:paddingTop="@dimen/adaptive_10dp"
+                android:paddingBottom="@dimen/adaptive_10dp"
+                android:text="@string/em_dialog_btn_cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_18sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/adaptive_11dp"
+            android:paddingEnd="@dimen/adaptive_23dp">
+
+            <TextView
+                android:id="@+id/btn_dialog_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/select_dialog_confirm"
+                android:gravity="center"
+                android:paddingTop="@dimen/adaptive_10dp"
+                android:paddingBottom="@dimen/adaptive_10dp"
+                android:text="@string/em_dialog_btn_confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_18sp" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

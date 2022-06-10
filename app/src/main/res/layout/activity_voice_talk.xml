@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_common_color"
+    android:paddingTop="@dimen/title_margin">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back" />
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_16dp"
+            android:layout_height="@dimen/adaptive_16dp"
+            android:layout_marginStart="@dimen/adaptive_6dp"
+            android:src="@drawable/voice_channel_title" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:layout_weight="1"
+            android:text="随意聊聊"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <ImageView
+            android:id="@+id/iv_invite"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:onClick="onInviteClick"
+            android:visibility="gone"
+            android:src="@drawable/icon_ground_add" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="@dimen/adaptive_30dp"
+            android:layout_height="@dimen/adaptive_30dp"
+            android:layout_marginStart="@dimen/adaptive_5dp"
+            android:layout_marginEnd="@dimen/adaptive_5dp"
+            android:visibility="gone"
+            android:src="@drawable/icon_more" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/illustration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_members"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/my_common_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_title" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_join"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/adaptive_34dp"
+            android:text="这里在等一位翩翩少年一起谈天说地"
+            android:textColor="#CCCCCC"
+            android:textSize="@dimen/adaptive_16sp" />
+
+        <Button
+            android:id="@+id/btn_join"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_24dp"
+            android:layout_marginEnd="@dimen/adaptive_24dp"
+            android:layout_marginBottom="@dimen/adaptive_50dp"
+            android:background="@drawable/demo_button_green_bg"
+            android:onClick="onJoinClick"
+            android:text="马上加入"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ctrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/adaptive_20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/cb_speaker"
+                android:onClick="switchSpeaker"
+                android:layout_width="@dimen/adaptive_28dp"
+                android:layout_height="@dimen/adaptive_28dp"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:background="@drawable/sl_speaker_ctrl"
+                android:button="@null" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <CheckBox
+                android:id="@+id/cb_mic"
+                android:onClick="switchMic"
+                android:layout_width="@dimen/adaptive_28dp"
+                android:layout_height="@dimen/adaptive_28dp"
+                android:layout_gravity="center"
+                android:checked="true"
+                android:background="@drawable/sl_mic_ctrl"
+                android:button="@null" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:onClick="onFinishClick"
+                android:id="@+id/iv_finish"
+                android:layout_width="@dimen/adaptive_28dp"
+                android:layout_height="@dimen/adaptive_28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_voice_finish" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

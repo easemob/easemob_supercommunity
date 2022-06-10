@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/em_main_nav_home"
+        android:icon="@drawable/demo_main_tab_home_selector"
+        android:title="@string/em_main_title_home" />
+
+    <!--添加好友 用通讯录-->
+    <item
+        android:id="@+id/em_main_nav_add_friend"
+        android:icon="@drawable/demo_main_tab_add_selector"
+        android:title="@string/em_main_title_add_friend" />
+
+    <item
+        android:id="@+id/em_main_nav_ground"
+        android:icon="@drawable/demo_main_tab_ground_selector"
+        android:title="@string/em_main_title_ground" />
+
+    <item
+        android:id="@+id/em_main_nav_msg"
+        android:icon="@drawable/demo_main_tab_message_selector"
+        android:title="@string/em_main_title_msg" />
+
+    <item
+        android:id="@+id/em_main_nav_me"
+        android:icon="@drawable/demo_main_tab_me_selector"
+        android:title="@string/em_main_title_me" />
+
+</menu>

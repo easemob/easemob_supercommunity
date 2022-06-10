@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/sheet_height"
+    android:background="@drawable/sp_bottom_sheet">
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/adaptive_28dp"
+        android:layout_height="@dimen/adaptive_28dp"
+        android:layout_marginStart="@dimen/adaptive_17dp"
+        android:layout_marginTop="@dimen/adaptive_11dp"
+        android:background="@drawable/icon_close"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_20dp"
+        android:layout_marginTop="@dimen/adaptive_40dp"
+        android:layout_marginEnd="@dimen/adaptive_18dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/iv_close">
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_delete_red" />
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:layout_marginStart="@dimen/adaptive_15dp"
+            android:src="@drawable/arrow_down" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/adaptive_12dp"
+            android:layout_weight="1"
+            android:text="社区分类"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp" />
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_sequence" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_14dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_top" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

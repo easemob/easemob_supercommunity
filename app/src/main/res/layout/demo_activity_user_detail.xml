@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/title_margin"
+    android:background="@color/my_common_color">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:text="@string/em_user_detail_title"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/em_margin_20"
+            android:layout_marginStart="@dimen/em_margin_20"
+            android:textSize="@dimen/em_size_big"
+            android:textColor="@color/white"
+            android:text="@string/em_user_detail_avatar"/>
+
+        <com.community.easeim.imkit.widget.EaseImageView
+            android:id="@+id/tv_headImage_view"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="@dimen/em_margin_20"
+            android:src="@drawable/ease_default_avatar"
+            app:ease_shape_type="round"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_sex_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/em_margin_20"
+            android:src="@drawable/mine_go"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/em_margin_15"
+        android:layout_marginRight="@dimen/em_margin_15"
+        android:layout_marginStart="@dimen/em_margin_15"
+        android:layout_marginEnd="@dimen/em_margin_15"
+        android:background="@color/default_divider_color"/>
+
+    <com.community.easeim.common.widget.ArrowItemView
+        android:id="@+id/item_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        app:arrowItemTitle="@string/em_user_detail_nickname"
+        app:arrowItemShowArrow="true"
+        app:arrowItemTitleColor="@color/white">
+    </com.community.easeim.common.widget.ArrowItemView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height"
+        android:paddingStart="@dimen/em_margin_20"
+        android:paddingLeft="@dimen/em_margin_20"
+        android:gravity="left|center_vertical"
+        android:textSize="@dimen/em_size_big"
+        android:textColor="@color/white"
+        android:text="个性签名"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_my_autograph"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height">
+        <ImageView
+            android:id="@+id/iv_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/em_margin_20"
+            android:src="@drawable/mine_edit"/>
+
+        <TextView
+            android:id="@+id/tv_my_autograph"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/iv_arrow"
+            android:layout_marginLeft="@dimen/em_margin_20"
+            android:layout_marginStart="@dimen/em_margin_20"
+            android:layout_marginEnd="@dimen/em_margin_20"
+            android:textSize="@dimen/em_size_big"
+            android:gravity="left"
+            android:textColor="@color/em_color_common_text_gray"
+            tools:text="群文件"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/em_margin_15"
+        android:layout_marginRight="@dimen/em_margin_15"
+        android:layout_marginStart="@dimen/em_margin_15"
+        android:layout_marginEnd="@dimen/em_margin_15"
+        android:background="@color/default_divider_color"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_my_gender"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height">
+
+        <TextView
+            android:id="@+id/tv_sex_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_sex_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/em_margin_20"
+            android:layout_marginStart="@dimen/em_margin_20"
+            android:textSize="@dimen/em_size_big"
+            android:textColor="@color/white"
+            android:text="性别"/>
+
+        <TextView
+            android:id="@+id/tv_sex_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/tv_sex_title"
+            app:layout_constraintRight_toLeftOf="@id/iv_sex_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/em_margin_20"
+            android:layout_marginStart="@dimen/em_margin_20"
+            android:layout_marginRight="@dimen/em_margin_10"
+            app:layout_goneMarginRight="@dimen/em_margin_20"
+            android:textSize="@dimen/em_size_big"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/em_color_common_text_gray"
+            tools:text="群文件"/>
+
+        <ImageView
+            android:id="@+id/iv_sex_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_sex_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/em_margin_20"
+            android:src="@drawable/mine_down"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/em_margin_15"
+        android:layout_marginRight="@dimen/em_margin_15"
+        android:layout_marginStart="@dimen/em_margin_15"
+        android:layout_marginEnd="@dimen/em_margin_15"
+        android:background="@color/default_divider_color"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/item_my_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/em_common_item_height">
+
+        <TextView
+            android:id="@+id/tv_birthday_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/tv_birthday_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/em_margin_20"
+            android:layout_marginStart="@dimen/em_margin_20"
+            android:textSize="@dimen/em_size_big"
+            android:textColor="@color/white"
+            android:text="生日"/>
+
+        <TextView
+            android:id="@+id/tv_birthday_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/tv_birthday_title"
+            app:layout_constraintRight_toLeftOf="@id/iv_birthday_arrow"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="@dimen/em_margin_20"
+            android:layout_marginStart="@dimen/em_margin_20"
+            android:layout_marginRight="@dimen/em_margin_10"
+            app:layout_goneMarginRight="@dimen/em_margin_20"
+            android:textSize="@dimen/em_size_big"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="@color/em_color_common_text_gray"
+            tools:text="群文件"/>
+
+        <ImageView
+            android:id="@+id/iv_birthday_arrow"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_birthday_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginRight="@dimen/em_margin_20"
+            android:src="@drawable/mine_down"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginLeft="@dimen/em_margin_15"
+        android:layout_marginRight="@dimen/em_margin_15"
+        android:layout_marginStart="@dimen/em_margin_15"
+        android:layout_marginEnd="@dimen/em_margin_15"
+        android:background="@color/default_divider_color"/>
+</LinearLayout>

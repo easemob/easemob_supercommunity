@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1F1F"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_unread_display_only"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_60dp"
+        android:gravity="center"
+        android:text="仅未读显示"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_show_msg_details"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_60dp"
+        android:gravity="center"
+        android:text="显示消息详情"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0.5dp"-->
+<!--        android:background="@android:color/black" />-->
+<!--    <TextView-->
+<!--        android:id="@+id/tv_cancel"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/adaptive_60dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="取消"-->
+<!--        android:textColor="@android:color/white"-->
+<!--        android:textSize="16sp" />-->
+
+</LinearLayout>

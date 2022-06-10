@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1F1F1F"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_man"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_60dp"
+        android:gravity="center"
+        android:text="男"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_woman"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_60dp"
+        android:gravity="center"
+        android:text="女"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_other"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_60dp"
+        android:gravity="center"
+        android:text="其它"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black" />
+
+    <TextView
+        android:id="@+id/tv_secret"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_60dp"
+        android:gravity="center"
+        android:text="保密"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@android:color/black" />
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_60dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+</LinearLayout>

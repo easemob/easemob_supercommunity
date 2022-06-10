@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/my_common_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/adaptive_8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <com.community.easeim.common.widget.CircleImageView
+            android:id="@+id/civ_head"
+            android:layout_width="@dimen/adaptive_56dp"
+            android:layout_height="@dimen/adaptive_56dp"
+            android:layout_marginStart="@dimen/adaptive_16dp"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/adaptive_8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="月兑さん"
+                android:textColor="@color/white"
+                android:textSize="@dimen/adaptive_18sp" />
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/adaptive_8dp"
+                android:text="环信ID：00001"
+                android:textColor="#929497"
+                android:textSize="@dimen/adaptive_16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:background="@drawable/sp_radius_48_27ae60"
+            android:gravity="center"
+            android:paddingStart="@dimen/adaptive_15dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="@dimen/adaptive_15dp"
+            android:paddingBottom="@dimen/adaptive_4dp"
+            android:text="加好友"
+            android:textColor="#F2F2F2"
+            android:textSize="@dimen/adaptive_14sp" />
+
+        <ImageView
+            android:layout_width="@dimen/adaptive_20dp"
+            android:layout_height="@dimen/adaptive_20dp"
+            android:layout_marginStart="@dimen/adaptive_8dp"
+            android:layout_marginEnd="@dimen/adaptive_16dp"
+            android:src="@drawable/icon_go" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_1dp"
+        android:layout_marginStart="@dimen/adaptive_64dp"
+        android:layout_marginTop="@dimen/adaptive_8dp"
+        android:background="#47464B" />
+
+</LinearLayout>

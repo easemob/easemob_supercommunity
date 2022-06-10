@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/title_margin"
+    android:background="@color/my_common_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/adaptive_48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="@dimen/adaptive_28dp"
+            android:layout_height="@dimen/adaptive_28dp"
+            android:layout_marginStart="@dimen/adaptive_20dp"
+            android:src="@drawable/icon_back"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/adaptive_18sp"
+            android:layout_marginStart="@dimen/adaptive_10dp"
+            android:text="@string/push_nick"/>
+
+        <TextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="保存"
+            android:textSize="@dimen/adaptive_18sp"
+            android:layout_marginEnd="@dimen/adaptive_16dp"
+            android:textColor="#34B76B"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_nick_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_input_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:paddingRight="@dimen/adaptive_18dp"
+            android:layout_marginTop="20dip"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:background="@drawable/demo_nickename_input_bg"
+            android:paddingLeft="10dip"
+            android:maxLength="16"
+            android:textColor="@color/white"
+            android:hint="@string/input_new_nick_hint" />
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:layout_marginTop="20dip"
+            android:textColor="#fff"
+            android:text="@string/save"
+            android:background="@drawable/demo_button_login_bg" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/adaptive_52dp">
+
+            <TextView
+                android:id="@+id/tv_modify_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginLeft="@dimen/adaptive_16dp"
+                android:layout_marginStart="@dimen/adaptive_16dp"
+                android:layout_marginRight="@dimen/adaptive_16dp"
+                app:layout_goneMarginRight="@dimen/adaptive_16dp"
+                android:textSize="@dimen/em_size_big"
+                android:gravity="end"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="@color/em_color_common_text_gray"
+                android:text="人如其名 桃之夭夭"/>
+
+
+            <TextView
+                android:id="@+id/tv_nick_name_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/em_color_common_text_gray"
+                android:layout_marginRight="@dimen/adaptive_16dp"
+                app:layout_goneMarginRight="@dimen/adaptive_16dp"
+                android:padding="5dp"
+                android:text="16/16"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_user_sign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/et_input_sign"
+            android:layout_width="match_parent"
+            android:layout_height="72dip"
+            android:layout_marginLeft="15dip"
+            android:layout_marginRight="15dip"
+            android:paddingRight="@dimen/adaptive_18dp"
+            android:layout_marginTop="20dip"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:background="@drawable/demo_nickename_input_bg"
+            android:paddingLeft="10dip"
+            android:maxLength="24"
+            android:textColor="@color/white"
+            android:hint="请留下你的个性签名" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_height="@dimen/adaptive_52dp">
+
+            <TextView
+                android:id="@+id/tv_sign_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/em_color_common_text_gray"
+                android:layout_marginRight="@dimen/adaptive_16dp"
+                app:layout_goneMarginRight="@dimen/adaptive_16dp"
+                android:padding="5dp"
+                tools:text="24/24"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</LinearLayout>

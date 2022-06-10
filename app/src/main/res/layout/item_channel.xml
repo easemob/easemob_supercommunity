@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/adaptive_25dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="#1f1f1f"
+    android:paddingStart="@dimen/adaptive_27dp"
+    android:paddingEnd="@dimen/adaptive_16dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/adaptive_30dp"
+        android:layout_height="@dimen/adaptive_30dp"
+        android:src="@drawable/icon_jing"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/adaptive_8dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="我加入的频道"
+        android:textColor="@color/white"
+        android:textSize="@dimen/adaptive_16sp" />
+
+    <TextView
+        android:id="@+id/tv_unread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sp_unread_bg"
+        android:gravity="center"
+        android:maxHeight="@dimen/adaptive_16dp"
+        android:minWidth="@dimen/adaptive_16dp"
+        android:text="8"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/adaptive_12sp"
+        android:visibility="visible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_go" />
+</LinearLayout>
