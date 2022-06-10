@@ -51,6 +51,7 @@
             android:layout_height="@dimen/adaptive_30dp"
             android:layout_marginStart="@dimen/adaptive_5dp"
             android:layout_marginEnd="@dimen/adaptive_5dp"
+            android:onClick="onMoreClick"
             android:visibility="gone"
             android:src="@drawable/icon_more" />
     </LinearLayout>

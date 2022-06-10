@@ -27,14 +27,15 @@ import retrofit2.http.POST;
 /**
  * App Server API 定义，使用 Retrofit 实现 Restful 风格。
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 public interface AppServerApi {
 //http://39.97.166.221: 阿里云正式地址
-    // 本机 192.168.137.1  192.168.1.108
+    // 本机 192.168.137.1  192.168.1.108  正式地址121.199.27.63:8888
 //    String HOST = "http://"+ EaseConstant.PREFIX_APP_SERVER+":12503";
     String HOST = "http://121.199.27.63" + ":8888";
+
     String BASE_PATH = "/";
     String BASE_URL = HOST + BASE_PATH;
 
@@ -49,6 +50,9 @@ public interface AppServerApi {
     @POST(GET_MESSAGE_LIST)
     Call<Result<List<MessageBean>>> getMessageList(@Body RequestBody body);
 
+    String TEST_INFO = "user/save";
+    @POST(TEST_INFO)
+    Call<Result<Object>> testInfo(@Body RequestBody body);
 
     //用户信息相关开始
     String SAVE_USER_INFO = "user/save";

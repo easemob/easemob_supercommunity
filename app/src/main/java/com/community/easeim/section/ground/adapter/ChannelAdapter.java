@@ -37,6 +37,7 @@ public class ChannelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         GroundGroupBean group = mList.get(position);
         ChannelHolder channelHolder = (ChannelHolder) holder;
         channelHolder.mTvName.setText(group.getGroupName());
+
         EMConversation conversation = EMClient.getInstance().chatManager().getConversation(group.getGroupId());
         if (conversation != null) {
             int unreadCount = conversation.getUnreadMsgCount();
@@ -74,7 +75,6 @@ public class ChannelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         protected TextView mTvName;
         protected TextView mTvUnread;
-
         public ChannelHolder(@NonNull View itemView) {
             super(itemView);
 

@@ -29,7 +29,7 @@ import okhttp3.ResponseBody;
 /**
  * 模拟网络数据的 OkHttp Interceptor
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 class MockDataInterceptor implements Interceptor {

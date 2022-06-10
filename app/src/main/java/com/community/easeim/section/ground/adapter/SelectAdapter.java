@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.community.easeim.R;
 import com.community.easeim.section.ground.bean.SelectBean;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SelectAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

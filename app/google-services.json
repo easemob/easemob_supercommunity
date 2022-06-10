@@ -14,13 +14,13 @@
       },
       "oauth_client": [
         {
-          "client_id": "xxxxxxxxx.apps.googleusercontent.com",
+          "client_id": "xxxxxxxxxxxxx.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "xxxxxxxxx"
+          "current_key": "xxxxxxxxxxxxx"
         }
       ],
       "services": {

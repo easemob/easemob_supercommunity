@@ -21,7 +21,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * API 管理类，可通过此类获取 Retrofit 风格的 API，也可以直接使用 {@link OkHttpUtil}。
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 public class ApiManager {

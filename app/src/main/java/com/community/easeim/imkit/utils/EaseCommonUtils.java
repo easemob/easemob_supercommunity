@@ -29,6 +29,7 @@ import com.community.easeim.imkit.EaseIM;
 import com.community.easeim.imkit.constants.EaseConstant;
 import com.community.easeim.imkit.domain.EaseUser;
 import com.community.easeim.imkit.provider.EaseUserProfileProvider;
+import com.community.easeim.section.ground.bean.GroundGroupBean;
 import com.hyphenate.chat.EMConversation;
 import com.hyphenate.chat.EMConversation.EMConversationType;
 import com.hyphenate.chat.EMMessage;
@@ -36,6 +37,8 @@ import com.hyphenate.chat.EMTextMessageBody;
 import com.hyphenate.util.EMLog;
 
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
 import java.util.UUID;
@@ -55,6 +58,33 @@ public class EaseCommonUtils {
         }
         Log.e(TAG,"shortBuffer.toString() :"+ shortBuffer.toString());
         return shortBuffer.toString();
+    }
+
+    /**
+     * 排序
+     * @param list
+     */
+    public static void sortByName(List<GroundGroupBean> list) {
+        if (list == null || list.isEmpty()) {
+            return;
+        }
+        Collections.sort(list, new Comparator<GroundGroupBean>() {
+            @Override
+            public int compare(GroundGroupBean o1, GroundGroupBean o2) {
+                String one = EaseCommonUtils.getLetter(o1.getGroupType());
+                String two = EaseCommonUtils.getLetter(o2.getGroupType());
+                if (one.equals(two)){
+                    return o1.getGroupType().compareTo(o2.getGroupType());
+                } else {
+                    if ("#".equals(one)) {
+                        return 1;
+                    } else if ("#".equals(two)) {
+                        return -1;
+                    }
+                    return one.compareTo(two);
+                }
+            }
+        });
     }
 
     /**

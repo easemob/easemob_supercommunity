@@ -29,8 +29,6 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-import cn.leancloud.LCLogger;
-import cn.leancloud.LeanCloud;
 
 public class DemoApplication extends Application implements Thread.UncaughtExceptionHandler {
     private static DemoApplication instance;
@@ -45,8 +43,6 @@ public class DemoApplication extends Application implements Thread.UncaughtExcep
         Bugly.init(getApplicationContext(), "657f3956ab", true);
         initThrowableHandler();
         initHx();
-        LeanCloud.initialize(this, "1yqVFUuL8lkswHz8ozpk3OK3-gzGzoHsz", "STSO54uh7lR6BAKyyNWQE1Id","https://1yqvfuul.lc-cn-n1-shared.com");
-        LeanCloud.setLogLevel(LCLogger.Level.ALL);
         RtcManager.getInstance().init(this);
         registerActivityLifecycleCallbacks();
         closeAndroidPDialog();

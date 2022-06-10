@@ -7,7 +7,7 @@ package com.community.easeim.common.http.api;
 /**
  * API 响应数据统一封装对象。
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 public class Result<T> {

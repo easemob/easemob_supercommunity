@@ -66,7 +66,7 @@ public class VoiceTalkActivity extends BaseInitActivity implements VoiceMemberAd
     private CheckBox mCbSpeaker;
     private CheckBox mCbMic;
     private TextView mTvName;
-    private MyBottomSheetDialog mMemberCtrlSheet;
+    private MyBottomSheetDialog mMemberCtrlSheet,mVoiceChannelCtrlSheet;
     private CircleImageView mCivMemberHead;
     private TextView mTvMemberName;
     private TextView mTvSwitchMemberMic;
@@ -76,8 +76,9 @@ public class VoiceTalkActivity extends BaseInitActivity implements VoiceMemberAd
     private RecyclerView mRvContactMembers;
     private ContactAdapter mContactAdapter;
     private ContactsViewModel mContactModel;
-    private ImageView mIvInvite;
+    private ImageView mIvInvite,mIvMore;
     private TextView mTvInvite;
+    private TextView mTvVoiceCtrlDel,mTvVoiceCtrlName;
     private String mGroundName;
     private ClipboardManager mClipboard;
 
@@ -103,11 +104,11 @@ public class VoiceTalkActivity extends BaseInitActivity implements VoiceMemberAd
         mCbMic = findViewById(R.id.cb_mic);
         mTvName = findViewById(R.id.tv_name);
         mIvInvite = findViewById(R.id.iv_invite);
-
+        mIvMore = findViewById(R.id.iv_more);
         initRv();
 
         switchState(false);
-
+        initVoiceChannelCtrlSheet();
         initBottomSheet();
     }
 
@@ -125,6 +126,14 @@ public class VoiceTalkActivity extends BaseInitActivity implements VoiceMemberAd
         mTvInvite = mInviteSheet.findViewById(R.id.tv_invite);
     }
 
+
+    private void initVoiceChannelCtrlSheet(){
+        mVoiceChannelCtrlSheet = new MyBottomSheetDialog(mContext);
+        mVoiceChannelCtrlSheet.setContentView(R.layout.sheet_voice_channel_detail);
+        mTvVoiceCtrlName = mVoiceChannelCtrlSheet.findViewById(R.id.tv_channel_name);
+        mTvVoiceCtrlDel = mVoiceChannelCtrlSheet.findViewById(R.id.tv_delete_channel);
+    }
+
     private void switchState(boolean isJoined) {
         mLlCtrl.setVisibility(isJoined ? View.VISIBLE : View.GONE);
         mRvMembers.setVisibility(isJoined ? View.VISIBLE : View.GONE);
@@ -132,6 +141,10 @@ public class VoiceTalkActivity extends BaseInitActivity implements VoiceMemberAd
 
         mIvBg.setVisibility(isJoined ? View.GONE : View.VISIBLE);
         mLlJoin.setVisibility(isJoined ? View.GONE : View.VISIBLE);
+
+        if (mVoiceChannel != null && TextUtils.equals(EMClient.getInstance().getCurrentUser(), mVoiceChannel.getOwner())) {
+            mIvMore.setVisibility(isJoined ? View.VISIBLE : View.GONE);
+        }
 
     }
 
@@ -148,6 +161,54 @@ public class VoiceTalkActivity extends BaseInitActivity implements VoiceMemberAd
         String str = "Hello！欢迎来「" + mGroundName + "」和我一起嗨！打开⬇️链接：https://www.easemob.com/download/app/discord_demo";
         mTvInvite.setText(str);
         mInviteSheet.show();
+    }
+
+    public void onMoreClick(View v){
+        mTvVoiceCtrlName.setText(mVoiceChannel.getChannelName());
+        mVoiceChannelCtrlSheet.show();
+        mVoiceChannelCtrlSheet.findViewById(R.id.ll_invite).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mVoiceChannelCtrlSheet.dismiss();
+                String str = "Hello！欢迎来「" + mGroundName + "」和我一起嗨！打开⬇️链接：https://www.easemob.com/download/app/discord_demo";
+                mTvInvite.setText(str);
+                mInviteSheet.show();
+            }
+        });
+
+
+
+        mTvVoiceCtrlDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.equals("语音交流",mVoiceChannel.getChannelName())) {
+                    com.hjq.toast.ToastUtils.show("\"语音交流\"为保留频道名称不能删除!");
+                    return;
+                }
+                new CustomDialog
+                        .Builder(mContext)
+                        .setTitle("确认把“" + mVoiceChannel.getChannelName() + "”语音频道删除？")
+                        .setTitleKey(mVoiceChannel.getChannelName())
+                        .setOnConfirmClickListener(new CustomDialogFragment.OnConfirmClickListener() {
+                            @Override
+                            public void onConfirmClick(View view) {
+                                VoiceChannelManager.getInstance().deleteVoiceChannel(mChannelId, new EMValueCallBack<Boolean>() {
+                                    @Override
+                                    public void onSuccess(Boolean value) {
+                                        LiveDataBus.get().with(DemoConstant.GROUP_CHANGE).postValue(EaseEvent.create(DemoConstant.GROUP_CHANGE, EaseEvent.TYPE.CHANNEL_CREATE));
+                                        finish();
+                                    }
+
+                                    @Override
+                                    public void onError(int error, String errorMsg) {
+                                        com.hjq.toast.ToastUtils.show("删除失败!");
+                                    }
+                                });
+                            }
+                        })
+                        .show();
+            }
+        });
     }
 
     @Override

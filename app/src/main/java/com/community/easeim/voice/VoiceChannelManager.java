@@ -182,7 +182,7 @@ public class VoiceChannelManager {
      * 删除一条社区和群的关联记录
      * @param channelId
      */
-    public void deleteVoiceChannel(String channelId) {
+    public void deleteVoiceChannel(String channelId,EMValueCallBack<Boolean> callBack) {
         RequestBody build = ApiManager.requestBodyBuilder()
                 .put("channelId", channelId)
                 .build();
@@ -190,11 +190,20 @@ public class VoiceChannelManager {
             @Override
             protected void onSuccess(Call<Result<Object>> call, @NonNull Object data) {
                 Log.e("VoiceChannelManager", "onSuccess: deleteVoiceChannel");
+                callBack.onSuccess(true);
+            }
+
+            @Override
+            public void onResultOk() {
+                super.onResultOk();
+                callBack.onSuccess(true);
+                Log.e("VoiceChannelManager", "onResultOk: deleteVoiceChannel");
             }
 
             @Override
             protected void onFail(Call<Result<Object>> call, @NonNull Throwable t) {
                 t.printStackTrace();
+                callBack.onSuccess(false);
             }
 
 

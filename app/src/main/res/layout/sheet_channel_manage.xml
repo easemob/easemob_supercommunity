@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/adaptive_12dp"
             android:layout_weight="1"
-            android:text="社区分类"
+            android:text="文字频道管理"
             android:textColor="@color/white"
             android:textSize="@dimen/adaptive_18sp" />
 

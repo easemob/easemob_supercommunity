@@ -27,7 +27,7 @@ import okio.GzipSource;
 
 /**
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 public final class HttpLoggingInterceptor implements Interceptor {
