@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 /**
  * 请求头工具类
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 public class NetUtils {

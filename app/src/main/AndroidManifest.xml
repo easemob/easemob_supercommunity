@@ -62,6 +62,7 @@
 
     <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
     <application
         android:name=".DemoApplication"
         android:allowBackup="true"
@@ -72,7 +73,16 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         android:usesNonSdkApi="true">
+<!--        <activity-->
+<!--            android:name=".TestMainActivity"-->
+<!--            android:exported="true"-->
+<!--            android:theme="@style/NoActionBar.SplashTheme">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
         <activity
             android:name="com.tencent.bugly.beta.ui.BetaActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|locale"

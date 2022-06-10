@@ -55,7 +55,8 @@ public class PickUserAdapter extends EaseBaseRecyclerViewAdapter<EaseUser> {
                     mHeader.setText(header);
                 }
             }
-            mName.setText(item.getNickname());
+            EaseUserUtils.setUserNick(item.getUsername(),mName);
+//            mName.setText(item.getNickname());
             EaseUserUtils.setUserAvatar( item.getUsername(), mAvatar);
         }
     }

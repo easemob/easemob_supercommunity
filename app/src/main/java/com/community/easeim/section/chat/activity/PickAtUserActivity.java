@@ -36,7 +36,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class PickAtUserActivity extends BaseInitActivity implements OnRefreshListener, OnItemClickListener, EaseSidebar.OnTouchEventListener, EaseTitleBar.OnBackPressListener {
-    private EaseTitleBar mTitleBarPick;
+//    private EaseTitleBar mTitleBarPick;
     private SmartRefreshLayout mSrlRefresh;
     private EaseRecyclerView mRvPickUserList;
     private EaseSidebar mSideBarPickUser;
@@ -67,7 +67,7 @@ public class PickAtUserActivity extends BaseInitActivity implements OnRefreshLis
     @Override
     protected void initView(Bundle savedInstanceState) {
         super.initView(savedInstanceState);
-        mTitleBarPick = findViewById(R.id.title_bar_pick);
+//        mTitleBarPick = findViewById(R.id.title_bar_pick);
         mSrlRefresh = findViewById(R.id.srl_refresh);
         mRvPickUserList = findViewById(R.id.rv_pick_user_list);
         mSideBarPickUser = findViewById(R.id.side_bar_pick_user);
@@ -86,7 +86,7 @@ public class PickAtUserActivity extends BaseInitActivity implements OnRefreshLis
         mSrlRefresh.setOnRefreshListener(this);
         mAdapter.setOnItemClickListener(this);
         mSideBarPickUser.setOnTouchEventListener(this);
-        mTitleBarPick.setOnBackPressListener(this);
+//        mTitleBarPick.setOnBackPressListener(this);
     }
 
     @Override

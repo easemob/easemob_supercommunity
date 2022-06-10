@@ -43,7 +43,7 @@ import okhttp3.Response;
 /**
  * 网络请求工具类
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 public class OkHttpUtil {

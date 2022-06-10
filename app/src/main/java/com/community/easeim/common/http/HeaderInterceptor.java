@@ -13,7 +13,7 @@ import okhttp3.Response;
 /**
  * 公共请求头 Header
  *
- * @author WeiYongZheng
+ * @author easeMob
  * @date 2020/6/8
  */
 public class HeaderInterceptor implements Interceptor {

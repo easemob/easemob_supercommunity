@@ -243,6 +243,7 @@ public class GroundDetailFragment extends BaseInitFragment implements View.OnCli
         }
 
         if (mRvChannel != null && mChannelAdapter != null) {
+           // EaseCommonUtils.sortByName(mList);
             mChannelAdapter.setData(mList);
         }
 
@@ -300,12 +301,14 @@ public class GroundDetailFragment extends BaseInitFragment implements View.OnCli
         }
     };
 
+
     private void initRvAddChannel() {
         LinearLayoutManager verticalManager = new LinearLayoutManager(mContext);
         verticalManager.setOrientation(RecyclerView.VERTICAL);
         RecyclerView rvSelect = mAddChannelDialog.findViewById(R.id.rv_select);
         EditText etChannelName = mAddChannelDialog.findViewById(R.id.et_channel_name);
         TextView tvCreateChannel = mAddChannelDialog.findViewById(R.id.tv_create);
+
         rvSelect.setLayoutManager(verticalManager);
         List<SelectBean> list = new ArrayList<>();
         list.add(new SelectBean(R.drawable.icon_jing, "文字频道"));
@@ -313,7 +316,8 @@ public class GroundDetailFragment extends BaseInitFragment implements View.OnCli
         SelectAdapter selectAdapter = new SelectAdapter(list);
         rvSelect.setAdapter(selectAdapter);
 
-        etChannelName.addTextChangedListener(new TextWatcher() {
+
+            etChannelName.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -343,6 +347,7 @@ public class GroundDetailFragment extends BaseInitFragment implements View.OnCli
                                 }
 
                                 selectAdapter.setChecked(0);
+
                                 ToastUtils.showToast("开始创建新频道");
                                 ImManager.getInstance().createChannel(channelName, mGroundBean, new EMValueCallBack<EMGroup>() {
                                     @Override
@@ -359,7 +364,12 @@ public class GroundDetailFragment extends BaseInitFragment implements View.OnCli
                                     }
                                 });
                             } else {
+                                if (TextUtils.equals("语音交流",channelName)) {
+                                    com.hjq.toast.ToastUtils.show("\"语音交流\"为保留频道名称不能使用!");
+                                    return;
+                                }
                                 ImManager.getInstance().createVoiceChannel(mGroundBean,channelName);
+                                LiveDataBus.get().with(DemoConstant.GROUP_CHANGE).postValue(EaseEvent.create(DemoConstant.GROUP_CHANGE, EaseEvent.TYPE.CHANNEL_CREATE));
                                 mAddChannelDialog.dismiss();
                                 selectAdapter.setChecked(1);
                             }
