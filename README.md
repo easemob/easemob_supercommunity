@@ -29,8 +29,7 @@ Android Studio Bumblebee   2021.1.1
 ## APK体验：
 [APK下载](https://www.easemob.com/download/demo)
 
-## Demo体验识别二维码
-![识别二维码体验Demo](https://www.easemob.com/statics/images/download/discord.png)
+
 
 ### 联系我们
 - 如果你遇到了困难，可以先参阅 [常见问题](https://docs-im.easemob.com/)
